@@ -34,12 +34,16 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@vee-validate/zod": "^4.12.2",
+    "@vueuse/core": "^10.6.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-vue-next": "^0.294.0",
     "radix-vue": "^1.2.3",
     "tailwind-merge": "^2.1.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vee-validate": "^4.12.2",
+    "zod": "^3.22.4"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",

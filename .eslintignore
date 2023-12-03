@@ -26,3 +26,4 @@ logs
 # Other files
 tailwind.config.js
 lib/utils.ts
+components/ui/**/*
