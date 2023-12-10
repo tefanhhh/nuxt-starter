@@ -29,9 +29,21 @@
           </FormControl>
         </FormItem>
       </FormField>
-
-      <div class="w-3/6" align="end">
-        <Button type="submit">
+      <FormField v-slot="{ value, handleChange }" name="rememberMe">
+        <FormItem class="w-3/6 flex flex-row-reverse items-center justify-end gap-x-4">
+          <div class="flex flex-row gap-2">
+            <FormLabel>
+              Remember Me
+            </FormLabel>
+            <FormMessage />
+          </div>
+          <FormControl>
+            <Switch :checked="value" class=" !mt-0" @update:checked="handleChange" />
+          </FormControl>
+        </FormItem>
+      </FormField>
+      <div class="w-3/6">
+        <Button type="submit" class="w-full">
           Submit
         </Button>
       </div>
@@ -46,7 +58,7 @@ import { h } from 'vue'
 import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
-
+import { Switch } from '@/components/ui/switch'
 import { Button } from '@/components/ui/button'
 import {
   FormControl,
